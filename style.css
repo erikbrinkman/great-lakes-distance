@@ -7,7 +7,10 @@ html, body {
 
 /* So that map always takes up maximum area */
 #canvas {
-    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 100vw;
     height: 52.0833333333vw;
 }
