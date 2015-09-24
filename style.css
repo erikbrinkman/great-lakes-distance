@@ -1,0 +1,119 @@
+html, body {
+    margin: 0;
+    height: 100%;
+    padding: 0;
+    overflow-y: hidden;
+}
+
+/* So that map always takes up maximum area */
+#canvas {
+    margin: 0 auto;
+    width: 100vw;
+    height: 52.0833333333vw;
+}
+
+@media screen and (min-aspect-ratio: 960/500) {
+    #canvas {
+        width: 192vh;
+        height: 100vh;
+    }
+}
+
+#canvas svg {
+    height: 100%;
+    width: 100%;
+}
+
+/* This is the outline of a state on mouse over */
+.info path {
+    fill-opacity: 0;
+    stroke: black;
+    stroke-width: 0.1em;
+    stroke-linejoin: round;
+    stroke-opacity: 0;
+    transition: stroke-opacity 0.1s linear;
+}
+
+.info g:hover path {
+    stroke-opacity: 1;
+}
+
+/* The distance of a state on mouse over */
+.info text {
+    opacity: 0;
+    transition: opacity 0.1s linear;
+    font-size: 1.2em;
+    font-weight: 900;
+    text-anchor: middle;
+    alignment-baseline: middle;
+    stroke: white;
+    stroke-width: 0.04em;
+    font-family: Lato;
+}
+
+.info g:hover text {
+    opacity: 1;
+}
+
+/* The furthest point in a state on mouse over */
+.info circle {
+    fill: white;
+    stroke: black;
+    stroke-width: 0.04em;
+    fill-opacity: 0;
+    stroke-opacity: 0;
+    transition: stroke-opacity 0.1s linear, fill-opacity 0.1s linear;
+}
+
+.info g:hover circle {
+    fill-opacity: 1;
+    stroke-opacity: 1;
+}
+
+/* The lakes*/
+.lakes path {
+    fill: black;
+}
+
+/* The spinner animation: http://codepen.io/mrrocks/pen/EiplA */
+#spinner {
+    animation: rotator 1.4s linear infinite;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes rotator {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(270deg); }
+}
+
+#spinner > circle {
+    stroke-dasharray: 187;
+    stroke-dashoffset: 0;
+    transform-origin: center;
+    animation:
+    dash 1.4s ease-in-out infinite, 
+    colors 5.6s ease-in-out infinite;
+}
+
+@keyframes colors {
+    0% { stroke: #4285F4; }
+    25% { stroke: #DE3E35; }
+    50% { stroke: #F7C223; }
+    75% { stroke: #1B9A59; }
+    100% { stroke: #4285F4; }
+}
+
+@keyframes dash {
+    0% { stroke-dashoffset: 187; }
+    50% {
+        stroke-dashoffset: 46.75;
+        transform:rotate(135deg);
+    }
+    100% {
+        stroke-dashoffset: 187;
+        transform:rotate(450deg);
+    }
+}
