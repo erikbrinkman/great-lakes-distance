@@ -22,7 +22,7 @@
     var data = {};
 
     // Load state boundaries
-    d3.json("//data.jquerygeo.com/usastates.json", (error, states) => {
+    d3.json("http://data.jquerygeo.com/usastates.json", (error, states) => {
         data.states = states;
         render();
     });
