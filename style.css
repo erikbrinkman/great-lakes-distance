@@ -59,7 +59,7 @@ html, body {
 .info circle {
     fill: white;
     stroke: black;
-    stroke-width: 0.04em;
+    stroke-width: 0.1em;
     fill-opacity: 0;
     stroke-opacity: 0;
     transition: stroke-opacity 0.1s linear, fill-opacity 0.1s linear;
