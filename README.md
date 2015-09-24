@@ -1,4 +1,4 @@
-# great-lakes-distance
+# Great Lakes Distance
 A D3 visualization of the farthest you can be from the great lakes in any state.
 
 This started as a way to verify if the farthest you can be from the great lakes
