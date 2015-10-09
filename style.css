@@ -52,6 +52,12 @@ html, body {
     stroke: white;
     stroke-width: 0.04em;
     font-family: Lato;
+
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .info g:hover text {
