@@ -13,6 +13,9 @@ html, body {
     transform: translate(-50%, -50%);
     width: 100vw;
     height: 52.0833333333vw;
+
+    opacity: 0;
+    transition: opacity 0.4s ease;
 }
 
 @media screen and (min-aspect-ratio: 960/500) {

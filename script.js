@@ -108,6 +108,8 @@
             .attr("x", d => projection(d.properties.center)[0])
             .attr("y", d => projection(d.properties.center)[1])
             .text(d => d.properties.dist.toFixed(0));
+
+        document.querySelector("#canvas").style.opacity = 1;
     }
 
     // Takes a geometry and returns only its points
