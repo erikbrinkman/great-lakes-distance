@@ -74,7 +74,7 @@
         color.domain([0, 0.5 * maxDist, maxDist]);
 
         // Processing is done, remove the spinner
-        d3.select("#spinner").style("display", "none");
+        document.querySelector("#spinner").classList.remove("is-active");
 
         // Colored States
         svg.append("g").attr("class", "states").selectAll("g")
